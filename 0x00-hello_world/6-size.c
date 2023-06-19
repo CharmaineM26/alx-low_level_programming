@@ -14,7 +14,7 @@ long long e;
 
 printf("Size of int = %zu bytes\n", sizeof(a));
 printf("Size of long = %zu bytes\n", sizeof(b));
-printf("Size of float = %2d bytes\n", sizeof(c));
-printf("Size of char = %2d bytes\n", sizeof(d));
-printf("Size of long long = %2d bytes\n", sizeof(e));
+printf("Size of float = %zu bytes\n", sizeof(c));
+printf("Size of char = %zu bytes\n", sizeof(d));
+printf("Size of long long = %zu bytes\n", sizeof(e));
 }
