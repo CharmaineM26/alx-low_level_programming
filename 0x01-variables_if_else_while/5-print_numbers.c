@@ -1,15 +1,19 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+*main - Entry point
+*Description: 'print single digit numbers of base 10'
+*Return: always (0)
+*/
 int main(void)
 {
-        int n;
+int n;
 
-        srand(time(0));
-        n = rand() - RAND_MAX / 2;
-        /* your code goes there */
-        return (0);
+for (n = 0 ; n <= 9 ; n++)
+{
+printf("%d", n);
+}
+printf("\n");
+return (0);
 }
