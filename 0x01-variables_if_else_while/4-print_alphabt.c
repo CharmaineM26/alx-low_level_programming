@@ -1,15 +1,25 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+*main - Entry point
+*Description: 'print alphabet in lowercase except q and e'
+*Return: always (0)
+*/
 int main(void)
 {
-        int n;
+int n = 97;
 
-        srand(time(0));
-        n = rand() - RAND_MAX / 2;
-        /* your code goes there */
-        return (0);
+while (n <= 122)
+{
+if (n == 101 || n == 113)
+{
+n++;
+continue;
+}
+putchar(n);
+n++;
+}
+putchar('\n');
+return (0);
 }
