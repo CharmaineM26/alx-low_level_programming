@@ -2,49 +2,27 @@
 
 /**
 * print_times_table - print n n times table, starting with 0
-* @n: the number to be treated
-* Return: n unless n less than 0 or greater than 15 then print nothing
+* @i: the number to be treated
+* @j: the number to be treated
+* Return: k unless n less than 0 or greater than 15 then print nothing
 */
-void print_times_table(int n)
+void print_times_table(int i, int j)
 {
-int x, y, z;
+int i, j, k;
 
-if (n >= 0 && n <= 15)
+for (i = 0 ; i <= 9 ; i++)
 {
-for (x = 0 ; x <= n ; x++)
+for (j = 0 ; j <= 9; j++)
 {
-for (y = 0 ; y <= n ; y++)
-{
-z = x * y;
-if (z > 99)
-{
+k = i * j;
+if (j != 0)
 _putchar(',');
+if (k < 10)
 _putchar(' ');
-_putchar((z / 100) + '0');
-_putchar(((z / 10) % 10) + '0');
-_putchar((z % 10) + '0');
-}
-else if (z > 9)
-{
-_putchar(',');
-_putchar(' ');
-_putchar(' ');
-_putchar(((z / 10) % 10) + '0');
-_putchar((z % 10) + '0');
-}
 else
-{
-if (y != 0)
-{
-_putchar(',');
-_putchar(' ');
-_putchar(' ');
-_putchar(' ');
-}
-_putchar(z + '0');
-}
+_putchar((k / 10) + '0');
+_putchar((k % 10) + '0');
 }
 _putchar('n');
-}
 }
 }
