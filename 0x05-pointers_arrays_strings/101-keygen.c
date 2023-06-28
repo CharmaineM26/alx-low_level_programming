@@ -4,7 +4,7 @@
 
 #define PASSWORD_LENGTH 8
 
-char generateRandomNumber()
+char generateRandomChar()
 {
 return 'A' + rand() % 26; 
 }
@@ -15,7 +15,7 @@ int i;
 
 for (i = 0 ; i <= PASSWORD_LENGTH ; i++)
 {
-password[i] = generateRandomNumber();
+password[i] = generateRandomChar();
 }
 password[PASSWORD_LENGTH] = '\0';
 }
