@@ -22,9 +22,9 @@ password[PASSWORD_LENGTH] = '\0';
 
 int main()
 {
-srand (time(NULL));
-
 char password[PASSWORD_LENGTH + 1];
+  
+srand (time(NULL));
 
 generateRandomPassword(password);
 
