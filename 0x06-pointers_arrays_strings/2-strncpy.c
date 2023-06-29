@@ -1,27 +1,27 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
 *_strncpy - copies a string
 *@dest: destination string pointer
 *@src: source string pointer
-*@n: input integer
+*@n: input integer value
 *Return: copied string
 */
 
 char *_strncpy(char *dest, char *src, int n)
 
 {
-if (dest == NULL)
-{
-return (NULL);
-}
+int j = 0;
 
-while (src[n] != '\0')
+while (j < n && src[j] != '\0')
 {
-dest[n] = src[n];
-n++;
+dest[j] = src[j];
+ j++;
 }
-dest[n] = '\0';
-return (0);
+while (j < n)
+{
+dest[j] = '\0';
+ j++;
+}
+return (dest);
 }
