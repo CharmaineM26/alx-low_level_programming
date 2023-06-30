@@ -9,8 +9,8 @@
 char *leet(char *n)
 {
 
-  char str1[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
- char str2[] = {52, 51, 48, 55, 49, 53};
+char str1[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+char str2[] = {52, 51, 48, 55, 49, 53};
 
 int i, j;
 
