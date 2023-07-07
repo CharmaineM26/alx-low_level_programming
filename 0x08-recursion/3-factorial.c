@@ -1,0 +1,17 @@
+/**
+*factorial - returns factorial of a given number
+*@n: input number
+*Return: factorial of input number else -1 for error
+*/
+
+int factorial(int n)
+{
+if (n < 0)
+{
+return (-1);
+}
+else
+{
+return (n * factorial(n - 1));
+}
+}
