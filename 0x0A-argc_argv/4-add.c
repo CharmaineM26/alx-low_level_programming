@@ -38,34 +38,28 @@ int main(int argc, char *argv[])
 
 {
 
-int num1, num2, result;
-int i, j;
+int result = 0;
+int i; 
 
 if (argc == 1)
 
 {
 printf("0\n");
 return (0);
-
 }
 for (i = 1; i < argc; i++)
 {
-for (j = 0; argv[i][j] != '\0'; j++)
-{
-if (argv[i][j] < '0' || argv[i][j] > '9')
+int num = _atoi(argv[i]);
+
+if (num < 0)
 {
 printf("Error\n");
 return (1);
 }
-}
-}
-num1 = _atoi(argv[1]);
-num2 = _atoi(argv[2]);
 
-result = num1 + num2;
-
-{
+result += num;
+}
 printf("%d\n", result);
-}
+
 return (0);
 }
