@@ -6,7 +6,6 @@
 *@s: the string to convert
 *Return: the converted integer
 */
-
 int _atoi(char *s)
 {
 int result, sign, i;
@@ -33,23 +32,21 @@ return (sign *result);
 *@argc: argument count
 *Return: result of addition
 */
-
 int main(int argc, char *argv[])
-
 {
-
 int result = 0;
-int i; 
+int i;
+int num;
 
 if (argc == 1)
-
 {
 printf("0\n");
 return (0);
 }
+
 for (i = 1; i < argc; i++)
-{
-int num = _atoi(argv[i]);
+
+num = _atoi(argv[i]);
 
 if (num < 0)
 {
@@ -58,8 +55,9 @@ return (1);
 }
 
 result += num;
-}
+{
 printf("%d\n", result);
+}
 
 return (0);
 }

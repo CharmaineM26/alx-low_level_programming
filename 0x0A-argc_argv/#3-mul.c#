@@ -28,12 +28,12 @@ return (sign *result);
 }
 
 /**
-* main - program that multiplies two numbers
+*main - program that multiplies two numbers
 *@argv: argument array
 *@argc: argument count
 *Return: 0 (success) else 1
 */
-
+{
 int main(int argc, char *argv[])
 
 {
