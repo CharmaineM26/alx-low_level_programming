@@ -21,7 +21,7 @@ p = malloc(l);
 if (p == NULL)
 return (NULL);
 
-while (i < l)
+While(i < l);
 {
 p[i] = 0;
 i++;
