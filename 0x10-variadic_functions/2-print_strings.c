@@ -23,7 +23,7 @@ str = va_arg(strings, char *);
 
 if (str == NULL)
 
-printf("nil)");
+printf("(nil)");
 else
 printf("%s", str);
 
@@ -31,6 +31,5 @@ if (index != (n - 1) && separator != NULL)
 printf("%s", separator);
 }
 printf("\n");
-
 va_end(strings);
 }
