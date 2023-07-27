@@ -1,63 +1,60 @@
-#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include<ctype.h>
+#include <string.h>
 
 /**
-*_atoi - converts a string to an integer
-*@s: the string to convert
-*Return: the converted integer
+*check_num - check - string there are digit
+*@str: array str
+*Return: always 0 (success)
 */
-int _atoi(char *s)
+int check_num(char *str)
 {
-int result, sign, i;
-result = 0;
-sign = 1;
-i = 0;
+unsigned int count;
+count = 0;
 
-if (s[0] == '-')
+while (count < strlen(str))
 {
-sign = -1;
-i++;
-}
-
-for (; s[i] != '\0'; i++)
+if (!isdigit(str[count]))
 {
-result = result * 10 + (s[i] - '0');
-}
-return (sign *result);
-}
-
-/**
-* main - program that adds positive numbers
-*@argv: argument array
-*@argc: argument count
-*Return: result of addition
-*/
-int main(int argc, char *argv[])
-{
-int result = 0;
-int i;
-int num;
-
-if (argc == 1)
-{
-printf("0\n");
 return (0);
 }
 
-for (i = 1; i < argc; i++)
+count++;
+}
+return (1);
+}
 
-num = _atoi(argv[i]);
+/**
+* main - print the name of the program
+*@argv: argument variable
+*@argc: argument count
+*Return: always 0 (success)
+*/
 
-if (num < 0)
+int main(int argc, char *argv[])
+{
+int count;
+int str_to_int;
+int sum = 0;
+
+count = 1;
+while (count < argc)
+{
+if (check_num(argv[count]))
+{
+str_to_int = atoi(argv[count]);
+sum += str_to_int;
+}
+else
 {
 printf("Error\n");
 return (1);
 }
-
-result += num;
-{
-printf("%d\n", result);
+count++;
 }
+
+printf("%d\n", sum);
 
 return (0);
 }
