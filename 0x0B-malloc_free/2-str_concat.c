@@ -14,9 +14,9 @@ char *conct;
 int i, ci;
 
 if (s1 == NULL)
-s1 = " ";
+s1 = "";
 if (s2 == NULL)
-s2 = " ";
+s2 = "";
 
 i = ci = 0;
 while (s1[i] != '\0')
@@ -29,6 +29,11 @@ if (conct == NULL)
 return (NULL);
 i = ci = 0;
 while (s1[i] != '\0')
+{
+conct[i] = s1[i];
+i++;
+}
+while (s2[ci] != '\0')
 {
 conct[i] = s2[ci];
 i++, ci++;
