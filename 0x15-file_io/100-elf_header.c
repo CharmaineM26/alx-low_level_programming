@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include "main.h"
 
 /**
 *main - entry point
@@ -20,7 +21,7 @@ int main(int argc, char *argv[])
 int fd;
 if (argc != 2)
 {
-fprintf(stderr, "Usag: %s elf_filename\n", argv[0]);
+fprintf(stderr, "Usage: %s elf_filename\n", argv[0]);
 exit(98);
 }
 
@@ -36,7 +37,6 @@ display_elf_header_info(fd);
 close(fd);
 
 return (0);
-
 }
 
 /**
@@ -77,3 +77,4 @@ printf("Type : %d\n", *(unsigned short *)(elf_header + 16));
 printf("Entry point address: %#x\n", *(unsigned int *)
 (elf_header + 24));
 }
+
