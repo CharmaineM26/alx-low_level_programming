@@ -8,7 +8,6 @@ void close_file(int fd);
 
 /**
 *create_buffer - Allocates 1024 bytes for a buffer.
-*@file: the name of the file buffer is storing chars for.
 *Return: A pointer to the newly-allocated buffer.
 *Description: program copies content from one file to other
 */
