@@ -14,3 +14,8 @@
 0x0D. C - Preprocessor
 0x0E. C - Structures, typedef
 0x10. C - Variadic functions
+
+
+0x13. C - More singly linked lists
+0x14. C - Bit manipulation
+0x15. C - File I/O
